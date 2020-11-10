@@ -1,15 +1,5 @@
 import math
 class OperatorHelper():
-    def Addition(self):
-        return "+"
-    def Subtraction(self):
-        return "-"
-    def Multiply(self):
-        return "*"
-    def Division(self):
-        return "/"
-    def Modulo(self):
-        return "%"
     def Equals(self,lastOpUsed,currentTotal, currentNum):
         totalAsFloat = float(currentTotal)
         numAsFloat =  float(currentNum)
