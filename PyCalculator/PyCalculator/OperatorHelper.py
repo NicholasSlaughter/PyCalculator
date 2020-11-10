@@ -1,16 +1,16 @@
 import math
 class OperatorHelper():
-    def Addition():
+    def Addition(self):
         return "+";
-    def Subtraction():
+    def Subtraction(self):
         return "-";
-    def Multiply():
+    def Multiply(self):
         return "*";
-    def Division():
+    def Division(self):
         return "/";
-    def Modulo():
+    def Modulo(self):
         return "%";
-    def Equals(lastOpUsed,currentTotal, currentNum):
+    def Equals(self,lastOpUsed,currentTotal, currentNum):
         totalAsFloat = float(currentTotal)
         numAsFloat =  float(currentNum)
         if str(lastOpUsed) == 0:
@@ -56,7 +56,7 @@ class OperatorHelper():
             else:
                 return int(output)
         return currentTotal;
-    def Clear():
+    def Clear(self):
         return 0;
-    def SignFlip(numberToFlip):
+    def SignFlip(self,numberToFlip):
         return float(numberToFlip) * -1
