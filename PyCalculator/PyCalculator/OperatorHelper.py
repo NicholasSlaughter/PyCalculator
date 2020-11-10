@@ -1,15 +1,15 @@
 import math
 class OperatorHelper():
     def Addition(self):
-        return "+";
+        return "+"
     def Subtraction(self):
-        return "-";
+        return "-"
     def Multiply(self):
-        return "*";
+        return "*"
     def Division(self):
-        return "/";
+        return "/"
     def Modulo(self):
-        return "%";
+        return "%"
     def Equals(self,lastOpUsed,currentTotal, currentNum):
         totalAsFloat = float(currentTotal)
         numAsFloat =  float(currentNum)
@@ -55,8 +55,8 @@ class OperatorHelper():
                 return formattedOutput
             else:
                 return int(output)
-        return currentTotal;
+        return currentTotal
     def Clear(self):
-        return 0;
+        return 0
     def SignFlip(self,numberToFlip):
         return float(numberToFlip) * -1

@@ -1,4 +1,4 @@
-from tkinter import *;
+from tkinter import *
 from OperatorHelper import OperatorHelper
 from NumberHelper import NumberHelper
 import keyboard
@@ -11,9 +11,9 @@ equalsUsed = 0
 decimalUsed = 0
 
 def main():
-    root = Tk();
-    root.title('Calculator in Python');
-    root.geometry("300x300");
+    root = Tk()
+    root.title('Calculator in Python')
+    root.geometry("300x300")
 
     numberBox = Entry(root)
     numberBox.grid(row=0,column=3)
@@ -32,26 +32,28 @@ def main():
         total = OperatorHelper.Clear(root)
         currentNum = OperatorHelper.Clear(root)
         decimalUsed = 0
-        EntryUpdater(total)
+        EntryUpdater(total)      
     def ClearScreen():
         global currentNum
+        global decimalUsed
         EntryUpdater("0")
         currentNum = "0"
         decimalUsed = 0
+        
     def SignFlip():
         global currentNum
         currentNum = OperatorHelper.SignFlip(root,currentNum)
-        EntryUpdater(currentNum)
+        EntryUpdater(currentNum)        
     def Mod():
-        OpFunc("%")
+        OpFunc("%")       
     def Division():
-        OpFunc("/")
+        OpFunc("/")        
     def Multi():
-        OpFunc("*")
+        OpFunc("*")        
     def Add():
-        OpFunc("+")
+        OpFunc("+")        
     def Sub():
-        OpFunc("-")
+        OpFunc("-")        
     def Equals():
         global total
         global currentNum
@@ -63,7 +65,7 @@ def main():
         lastOpUsed = "0"
         opUsed = "0"
         equalsUsed = 1
-        EntryUpdater(total)
+        EntryUpdater(total)        
     def OpFunc(operator):
         global total
         global currentNum
@@ -123,7 +125,7 @@ def main():
             currentNum = "0"
             currentNum = NumberHelper.Zero(root,currentNum)
             EntryUpdater(currentNum)
-            equalsUsed = 0
+            equalsUsed = 0        
     def One():
         global currentNum
         global equalsUsed
@@ -134,7 +136,7 @@ def main():
             currentNum = "0"
             currentNum = NumberHelper.One(root,currentNum)
             EntryUpdater(currentNum)
-            equalsUsed = 0
+            equalsUsed = 0       
     def Two():
         global currentNum
         global equalsUsed
@@ -145,7 +147,7 @@ def main():
             currentNum = "0"
             currentNum = NumberHelper.Two(root,currentNum)
             EntryUpdater(currentNum)
-            equalsUsed = 0
+            equalsUsed = 0        
     def Three():
         global currentNum
         global equalsUsed
@@ -156,7 +158,7 @@ def main():
             currentNum = "0"
             currentNum = NumberHelper.Three(root,currentNum)
             EntryUpdater(currentNum)
-            equalsUsed = 0
+            equalsUsed = 0        
     def Four():
         global currentNum
         global equalsUsed
@@ -167,7 +169,7 @@ def main():
             currentNum = "0"
             currentNum = NumberHelper.Four(root,currentNum)
             EntryUpdater(currentNum)
-            equalsUsed = 0
+            equalsUsed = 0        
     def Five():
         global currentNum
         global equalsUsed
@@ -179,7 +181,7 @@ def main():
             currentNum = "0"
             currentNum = NumberHelper.Five(root,currentNum)
             EntryUpdater(currentNum)
-            equalsUsed = 0
+            equalsUsed = 0        
     def Six():
         global currentNum
         global equalsUsed
@@ -190,7 +192,7 @@ def main():
             currentNum = "0"
             currentNum = NumberHelper.Six(root,currentNum)
             EntryUpdater(currentNum)
-            equalsUsed = 0
+            equalsUsed = 0        
     def Seven():
         global currentNum
         global equalsUsed
@@ -201,7 +203,7 @@ def main():
             currentNum = "0"
             currentNum = NumberHelper.Seven(root,currentNum)
             EntryUpdater(currentNum)
-            equalsUsed = 0
+            equalsUsed = 0        
     def Eight():
         global currentNum
         global equalsUsed
@@ -212,7 +214,7 @@ def main():
             currentNum = "0"
             currentNum = NumberHelper.Eight(root,currentNum)
             EntryUpdater(currentNum)
-            equalsUsed = 0
+            equalsUsed = 0       
     def Nine():
         global currentNum
         global equalsUsed
@@ -223,7 +225,7 @@ def main():
             currentNum = "0"
             currentNum = NumberHelper.Nine(root,currentNum)
             EntryUpdater(currentNum)
-            equalsUsed = 0
+            equalsUsed = 0       
     def Decimal():
         global decimalUsed
         if decimalUsed == 0:
@@ -239,6 +241,7 @@ def main():
                 EntryUpdater(currentNum)
                 decimalUsed = 1
                 equalsUsed = 0
+        
 
     # Buttons With Their Commands
     clearEverythingButton = Button(root, text="CE", command=ClearEverything , font=20).grid(row=1,column=0)
@@ -290,4 +293,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main();
+    main()
