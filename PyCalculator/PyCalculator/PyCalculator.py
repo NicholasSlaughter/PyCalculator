@@ -7,6 +7,7 @@ total = "0"
 currentNum = "0"
 lastOpUsed = "0"
 opUsed = "0"
+CHARLIMIT = 26
 equalsUsed = 0
 decimalUsed = 0
 
@@ -87,7 +88,7 @@ def main():
                 total = str(totalToAdd)
                 currentNum = "0"
                 decimalUsed = 0
-                equalsUsed = 0
+                equalsUsed = 1
                 EntryUpdater(total)
         elif str(opUsed) == "1" and lastOpUsed == operator:
             if str(currentNum) != "0":
@@ -96,7 +97,7 @@ def main():
                 total = str(totalToAdd)
                 currentNum = "0"
                 decimalUsed = 0
-                equalsUsed = 0
+                equalsUsed = 1
                 EntryUpdater(total)
     def OpConditional(operator):
         global total
@@ -117,129 +118,162 @@ def main():
     def Zero():
         global currentNum
         global equalsUsed
-        if equalsUsed == 0:
-            currentNum = NumberHelper.Zero(root,currentNum)
-            EntryUpdater(currentNum)
-        else:
-            currentNum = "0"
-            currentNum = NumberHelper.Zero(root,currentNum)
-            EntryUpdater(currentNum)
-            equalsUsed = 0        
+        global CHARLIMIT
+        length = len(str(currentNum))
+        if length != CHARLIMIT:
+            if equalsUsed == 0:
+                currentNum = NumberHelper.Zero(root,currentNum)
+                EntryUpdater(currentNum)
+            else:
+                currentNum = "0"
+                currentNum = NumberHelper.Zero(root,currentNum)
+                EntryUpdater(currentNum)
+                equalsUsed = 0        
     def One():
         global currentNum
         global equalsUsed
-        if equalsUsed == 0:
-            currentNum = NumberHelper.One(root,currentNum)
-            EntryUpdater(currentNum)
-        else:
-            currentNum = "0"
-            currentNum = NumberHelper.One(root,currentNum)
-            EntryUpdater(currentNum)
-            equalsUsed = 0       
+        global CHARLIMIT
+        length = len(str(currentNum))
+        if length != CHARLIMIT:
+            if equalsUsed == 0:
+                currentNum = NumberHelper.One(root,currentNum)
+                EntryUpdater(currentNum)
+            else:
+                currentNum = "0"
+                currentNum = NumberHelper.One(root,currentNum)
+                EntryUpdater(currentNum)
+                equalsUsed = 0       
     def Two():
         global currentNum
         global equalsUsed
-        if equalsUsed == 0:
-            currentNum = NumberHelper.Two(root,currentNum)
-            EntryUpdater(currentNum)
-        else:
-            currentNum = "0"
-            currentNum = NumberHelper.Two(root,currentNum)
-            EntryUpdater(currentNum)
-            equalsUsed = 0        
+        global CHARLIMIT
+        length = len(str(currentNum))
+        if length != CHARLIMIT:
+            if equalsUsed == 0:
+                currentNum = NumberHelper.Two(root,currentNum)
+                EntryUpdater(currentNum)
+            else:
+                currentNum = "0"
+                currentNum = NumberHelper.Two(root,currentNum)
+                EntryUpdater(currentNum)
+                equalsUsed = 0        
     def Three():
         global currentNum
         global equalsUsed
-        if equalsUsed == 0:
-            currentNum = NumberHelper.Three(root,currentNum)
-            EntryUpdater(currentNum)
-        else:
-            currentNum = "0"
-            currentNum = NumberHelper.Three(root,currentNum)
-            EntryUpdater(currentNum)
-            equalsUsed = 0        
+        global CHARLIMIT
+        length = len(str(currentNum))
+        if length != CHARLIMIT:
+            if equalsUsed == 0:
+                currentNum = NumberHelper.Three(root,currentNum)
+                EntryUpdater(currentNum)
+            else:
+                currentNum = "0"
+                currentNum = NumberHelper.Three(root,currentNum)
+                EntryUpdater(currentNum)
+                equalsUsed = 0        
     def Four():
         global currentNum
         global equalsUsed
-        if equalsUsed == 0:
-            currentNum = NumberHelper.Four(root,currentNum)
-            EntryUpdater(currentNum)
-        else:
-            currentNum = "0"
-            currentNum = NumberHelper.Four(root,currentNum)
-            EntryUpdater(currentNum)
-            equalsUsed = 0        
+        global CHARLIMIT
+        length = len(str(currentNum))
+        if length != CHARLIMIT:
+            if equalsUsed == 0:
+                currentNum = NumberHelper.Four(root,currentNum)
+                EntryUpdater(currentNum)
+            else:
+                currentNum = "0"
+                currentNum = NumberHelper.Four(root,currentNum)
+                EntryUpdater(currentNum)
+                equalsUsed = 0        
     def Five():
         global currentNum
         global equalsUsed
-        if equalsUsed == 0:
-            if keyboard.is_pressed("shift") == False:
+        global CHARLIMIT
+        length = len(str(currentNum))
+        if length != CHARLIMIT:
+            if equalsUsed == 0:
+                if keyboard.is_pressed("shift") == False:
+                    currentNum = NumberHelper.Five(root,currentNum)
+                    EntryUpdater(currentNum)
+            else:
+                currentNum = "0"
                 currentNum = NumberHelper.Five(root,currentNum)
                 EntryUpdater(currentNum)
-        else:
-            currentNum = "0"
-            currentNum = NumberHelper.Five(root,currentNum)
-            EntryUpdater(currentNum)
-            equalsUsed = 0        
+                equalsUsed = 0        
     def Six():
         global currentNum
         global equalsUsed
-        if equalsUsed == 0:
-            currentNum = NumberHelper.Six(root,currentNum)
-            EntryUpdater(currentNum)
-        else:
-            currentNum = "0"
-            currentNum = NumberHelper.Six(root,currentNum)
-            EntryUpdater(currentNum)
-            equalsUsed = 0        
+        global CHARLIMIT
+        length = len(str(currentNum))
+        if length != CHARLIMIT:
+            if equalsUsed == 0:
+                currentNum = NumberHelper.Six(root,currentNum)
+                EntryUpdater(currentNum)
+            else:
+                currentNum = "0"
+                currentNum = NumberHelper.Six(root,currentNum)
+                EntryUpdater(currentNum)
+                equalsUsed = 0        
     def Seven():
         global currentNum
         global equalsUsed
-        if equalsUsed == 0:
-            currentNum = NumberHelper.Seven(root,currentNum)
-            EntryUpdater(currentNum)
-        else:
-            currentNum = "0"
-            currentNum = NumberHelper.Seven(root,currentNum)
-            EntryUpdater(currentNum)
-            equalsUsed = 0        
+        global CHARLIMIT
+        length = len(str(currentNum))
+        if length != CHARLIMIT:
+            if equalsUsed == 0:
+                currentNum = NumberHelper.Seven(root,currentNum)
+                EntryUpdater(currentNum)
+            else:
+                currentNum = "0"
+                currentNum = NumberHelper.Seven(root,currentNum)
+                EntryUpdater(currentNum)
+                equalsUsed = 0        
     def Eight():
         global currentNum
         global equalsUsed
-        if equalsUsed == 0:
-            currentNum = NumberHelper.Eight(root,currentNum)
-            EntryUpdater(currentNum)
-        else:
-            currentNum = "0"
-            currentNum = NumberHelper.Eight(root,currentNum)
-            EntryUpdater(currentNum)
-            equalsUsed = 0       
+        global CHARLIMIT
+        length = len(str(currentNum))
+        if length != CHARLIMIT:
+            if equalsUsed == 0:
+                currentNum = NumberHelper.Eight(root,currentNum)
+                EntryUpdater(currentNum)
+            else:
+                currentNum = "0"
+                currentNum = NumberHelper.Eight(root,currentNum)
+                EntryUpdater(currentNum)
+                equalsUsed = 0       
     def Nine():
         global currentNum
         global equalsUsed
-        if equalsUsed == 0:
-            currentNum = NumberHelper.Nine(root,currentNum)
-            EntryUpdater(currentNum)
-        else:
-            currentNum = "0"
-            currentNum = NumberHelper.Nine(root,currentNum)
-            EntryUpdater(currentNum)
-            equalsUsed = 0       
-    def Decimal():
-        global decimalUsed
-        if decimalUsed == 0:
-            global currentNum
-            global equalsUsed
+        global CHARLIMIT
+        length = len(str(currentNum))
+        if length != CHARLIMIT:
             if equalsUsed == 0:
-                currentNum = NumberHelper.Decimal(root,currentNum)
+                currentNum = NumberHelper.Nine(root,currentNum)
                 EntryUpdater(currentNum)
-                decimalUsed = 1
             else:
                 currentNum = "0"
-                currentNum = NumberHelper.Decimal(root,currentNum)
+                currentNum = NumberHelper.Nine(root,currentNum)
                 EntryUpdater(currentNum)
-                decimalUsed = 1
-                equalsUsed = 0
+                equalsUsed = 0       
+    def Decimal():
+        global decimalUsed
+        global CHARLIMIT
+        global currentNum
+        length = len(str(currentNum))
+        if length != CHARLIMIT:
+            if decimalUsed == 0:
+                global equalsUsed
+                if equalsUsed == 0:
+                    currentNum = NumberHelper.Decimal(root,currentNum)
+                    EntryUpdater(currentNum)
+                    decimalUsed = 1
+                else:
+                    currentNum = "0"
+                    currentNum = NumberHelper.Decimal(root,currentNum)
+                    EntryUpdater(currentNum)
+                    decimalUsed = 1
+                    equalsUsed = 0
         
 
     # Buttons With Their Commands
